@@ -1,0 +1,105 @@
+/* src/components/Schedule.css */
+.schedule {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fc-toolbar {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.fc-toolbar .fc-button {
+    background-color: #00ff00;
+    border: none;
+    color: #000;
+}
+
+.fc-daygrid-event {
+    background-color: #00ff00;
+    border: none;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.fc-event-main {
+    background-color: #00ff00;
+    border-radius: 5px;
+    padding: 5px;
+    color: #000;
+}
+
+.fc-daygrid-day {
+    border: 1px solid #282828;
+}
+
+.fc .fc-button-primary {
+    background-color: #00ff00;
+    border-color: #00ff00;
+}
+
+.fc-daygrid-event:hover {
+    transform: scale(1.1);
+    background-color: #ff6600; /* Color más visible en hover */
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup h3 {
+    margin-top: 0;
+    color: #00ff00;
+}
+
+.popup p {
+    margin: 10px 0;
+}
+
+.popup .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popup button {
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #fff;
+}

@@ -15,35 +15,8 @@
     color: #fff;
     text-align: center;
     font-size: 2.5rem;
-    position: relative;
     display: inline-block;
     padding: 0 20px;
-}
-
-.contacto h2::before, .contacto h2::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 50%;
-    height: 2px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    animation: animateBorder 2s linear infinite;
-}
-
-.contacto h2::before {
-    left: 0;
-    transform: translateX(-100%);
-}
-
-.contacto h2::after {
-    right: 0;
-    transform: translateX(100%);
-}
-
-@keyframes animateBorder {
-    0% { transform: translateX(-100%); }
-    50% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
 }
 
 .contacto .icon-container {
@@ -61,5 +34,5 @@
 
 .contacto .icon-container a:hover {
     transform: scale(1.2);
-    color: #feb47b;
+    color: #8afe7b;
 }

@@ -1,0 +1,107 @@
+/* src/components/Header.css */
+
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: logoAnimation 2s forwards;
+}
+
+.logo {
+    width: 40px; /* Ajuste para móviles */
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-title {
+    width: 60px; /* Ajuste para móviles */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    margin-right: 20px; /* Ajuste para mover los botones del navbar hacia la izquierda */
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Archivo Black', sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    position: relative;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #00ff00;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+nav a:hover {
+    color: #00ff00;
+}
+
+/* Estilos responsivos */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 10px;
+        transform: none;
+        animation: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes logoAnimation {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
