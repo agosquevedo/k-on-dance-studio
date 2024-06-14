@@ -1,5 +1,4 @@
 /* src/components/Header.css */
-
 header {
     background-color: #fff;
     padding: 10px 20px;
@@ -22,26 +21,31 @@ header {
 }
 
 .logo {
-    width: 40px; /* Ajuste para móviles */
+    width: 50px;
     margin-right: 10px;
     margin-bottom: 20px;
 }
 
 .logo-title {
-    width: 60px; /* Ajuste para móviles */
+    width: 80px;
     align-items: center;
 }
 
-nav ul {
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     gap: 10px;
-    margin-right: 20px; /* Ajuste para mover los botones del navbar hacia la izquierda */
+    margin-right: 20px;
 }
 
-nav a {
+.nav-links a {
     color: #000;
     text-decoration: none;
     font-weight: bold;
@@ -52,7 +56,7 @@ nav a {
     position: relative;
 }
 
-nav a::before {
+.nav-links a::before {
     content: '';
     position: absolute;
     width: 0%;
@@ -64,38 +68,48 @@ nav a::before {
     transition: all 0.3s ease-in-out;
 }
 
-nav a:hover::before {
+.nav-links a:hover::before {
     visibility: visible;
     width: 100%;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: #00ff00;
 }
 
-/* Estilos responsivos */
+.mobile-menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.nav-links-mobile a {
+    color: #000;
+    font-size: 1.5rem;
+}
+
 @media (max-width: 800px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
+    .nav-links {
+        display: none;
     }
 
-    .logo-container {
-        justify-content: center;
-        margin-bottom: 10px;
-        transform: none;
-        animation: none;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        padding: 5px 10px;
-        font-size: 0.9rem;
+    .mobile-menu-icon {
+        display: block;
     }
 }
 
