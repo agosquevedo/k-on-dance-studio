@@ -18,16 +18,17 @@ const Header = () => {
                 </Link>
             </div>
             <nav>
-                <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+                <div className="burger" onClick={handleToggle}>
+                    ☰
+                </div>
+                <ul className={`nav-links ${isOpen ? 'nav-active' : ''}`}>
                     <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/classes">Clases</Link></li>
                     <li><Link to="/groups">Grupos</Link></li>
                     <li><Link to="/proyectos">Proyectos</Link></li>
                     <li><Link to="/contact">Contacto</Link></li>
+                    <li><button className="close-btn" onClick={handleToggle}>✖</button></li>
                 </ul>
-                <div className="burger" onClick={handleToggle}>
-                    ☰
-                </div>
             </nav>
         </header>
     );

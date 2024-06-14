@@ -1,5 +1,5 @@
 header {
-    background-color: #fff;
+    background-color: #ffffff;
     position: fixed;
     width: 100%;
     top: 0;
@@ -8,21 +8,22 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 .logo-container {
-    display: flex;
+    display: block;
     align-items: center;
 }
 
 .logo {
-    width: 50px;
+    width: 500px;
     margin-right: 10px;
 }
 
 .logo-title {
-    width: 70px;
+    width: 500px;
 }
 
 .nav-links {
@@ -31,6 +32,7 @@ header {
     margin: 0;
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .nav-links li {
@@ -51,30 +53,62 @@ header {
     color: #00ff00;
 }
 
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.close-btn:hover {
+    color: #00ff00;
+}
+
+/* Styles for the burger menu */
+.burger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000;
+}
+
+.burger:hover {
+    color: #00ff00;
+}
+
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+    header {
+        padding: 10px 10px; /* Ajustar el padding para pantallas pequeñas */
+    }
+
+    .logo {
+        width: 40px; /* Hacer el logo más pequeño */
+    }
+
+    .logo-title {
+        width: 70px; /* Hacer el título más pequeño */
+        padding-top: 20px;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
         align-items: center;
-        background-color: #fff;
         width: 100%;
         position: absolute;
         top: 60px;
         left: 0;
+        background-color: #fff;
+        padding: 10px 0;
     }
-    
-    .nav-links.active {
+
+    .nav-links.nav-active {
         display: flex;
     }
-    
+
     .burger {
         display: block;
-        cursor: pointer;
-        font-size: 24px;
-    }
-    
-    .burger:hover {
-        color: #00ff00;
     }
 }
