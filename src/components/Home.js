@@ -72,8 +72,8 @@ const Home = () => {
                     <button id="sound-button">Mantén presionado para escuchar el sonido</button>
                 </div>
                 <div className="quotes">
-                    <h1>1° ACADEMIA DE K-POP Y MÁS en Rio Cuarto</h1>
-                    <h2>Liderando el K-POP y más en Rio Cuarto: tu futuro comienza hoy.</h2>
+                    <h1>1° ACADEMIA DE K-POP EN RIO CUARTO</h1>
+                    <h2>Liderando el K-POP en la ciudad: tu futuro comienza hoy.</h2>
                 </div>
             </section>
         </main>
