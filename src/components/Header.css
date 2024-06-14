@@ -1,7 +1,6 @@
-/* src/components/Header.css */
 header {
     background-color: #fff;
-    position: flex;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -9,18 +8,17 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding-bottom: 10px;
+    padding: 10px;
 }
 
 .logo-container {
     display: flex;
-    align-items: right;
+    align-items: center;
 }
 
 .logo {
     width: 50px;
     margin-right: 10px;
-    padding-bottom: 20px;
 }
 
 .logo-title {
@@ -55,24 +53,28 @@ header {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-    
-    .logo-container {
-        margin-bottom: 10px;
-    }
-    
     .nav-links {
-        flex-direction: row;
+        display: none;
+        flex-direction: column;
         align-items: center;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
     }
     
-    .nav-links li {
-        margin: 5px 0;
+    .nav-links.active {
+        display: flex;
     }
     
-    .nav-links a {
-        padding: 10px 20px;
+    .burger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+    
+    .burger:hover {
+        color: #00ff00;
     }
 }
