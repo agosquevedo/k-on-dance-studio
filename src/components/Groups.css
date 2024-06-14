@@ -1,0 +1,87 @@
+/* src/components/Groups.css */
+
+.groups {
+    padding: 70px 20px;
+    background: #000000;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; /* Ensure the video doesn't overflow */
+}
+
+.groups h2 {
+    margin-bottom: 50px;
+    color: #fff;
+    position: relative;
+    z-index: 2; /* Ensure the title is above the video */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Ensure the video is behind the content */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.group-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.group-card img.group-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.group-card h3 {
+    margin: 10px 0;
+    color: #000;
+}
+
+.group-card p {
+    color: #333;
+    font-size: 1rem;
+}
+
+.group-card img.group-logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Swiper specific styling */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    padding-bottom: 60px; /* Adjust to avoid overlapping with text */
+}
+
+.swiper-slide {
+    width: 250px; /* Adjust the slide width */
+    opacity: 0.5;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+}
